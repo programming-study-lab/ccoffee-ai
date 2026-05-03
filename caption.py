@@ -31,8 +31,6 @@ def generate_captions(menu_name: str, price: str) -> Dict[str, str]:
         "You are a creative social media copywriter for CCoffee cafe. "
         "Write three Instagram captions for the following menu item and price. "
         "Return the output as valid JSON with keys: cute, minimal, gen_z.\n\n"
-        # f"Menu: {menu_name}\n"
-        # f"Price: {price}\n\n"
         "Use a friendly tone suitable for Instagram. "
         "Do not include extra explanation or markdown formatting in the JSON output."
         "Adjust the code so that the output is in Thai and use informal language."
@@ -53,7 +51,8 @@ def generate_captions(menu_name: str, price: str) -> Dict[str, str]:
     text = response.text.strip()
 
     # print(text)
-    return text
+    return json.loads(text)
+    # return text
 
     try:
         captions = json.loads(text)
@@ -89,6 +88,6 @@ if __name__ == "__main__":
     #     "gen_z": "ลาเต้เย็น 50 บาท ดื่มแล้วตื่นเต้นมาก ค่ะ ☕️💥"
     # }
 
-    print(f"cute: {str(captions['cute'])}")
-    print(f"minimal: {str(captions['minimal'])}")
-    print(f"gen_z: {str(captions['gen_z'])}")
+    print(fr"cute: {captions['cute']}")
+    print(fr"minimal: {captions['minimal']}")
+    print(fr"gen_z: {captions['gen_z']}")
