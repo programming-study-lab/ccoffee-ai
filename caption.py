@@ -1,21 +1,17 @@
 import json
-# import os
+import os
 from typing import Dict
 
 from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
-# API_KEY = os.getenv("GOOGLE_API_KEY")
 client = genai.Client()
 
-print(client)
-
-if not client:
-    raise RuntimeError("GOOGLE_API_KEY not found in environment. Set it in .env.")
+# if not client:
+#     raise RuntimeError("GOOGLE_API_KEY not found in environment. Set it in .env.")
 
 # genai.configure(api_key=API_KEY)
-
 
 def generate_captions(menu_name: str, price: str) -> Dict[str, str]:
     """Generate three Instagram caption variants for CCoffee posts.
@@ -30,7 +26,7 @@ def generate_captions(menu_name: str, price: str) -> Dict[str, str]:
     prompt = (
         "You are a creative social media copywriter for CCoffee cafe. "
         "Write three Instagram captions for the following menu item and price. "
-        "Return the output as valid JSON with keys: cute, minimal, gen_z.\n\n"
+        "Return the output as valid JSON application with keys: cute, minimal, gen_z.\n\n"
         "Use a friendly tone suitable for Instagram. "
         "Do not include extra explanation or markdown formatting in the JSON output."
         "Adjust the code so that the output is in Thai and use informal language."
@@ -43,14 +39,19 @@ def generate_captions(menu_name: str, price: str) -> Dict[str, str]:
     #     max_output_tokens=200,
     # )
 
+    print(f"++++++++++++++++++++++++++++++++++++{os.getenv("GEMINI_MODEL")}")
+
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        # model="gemini-2.5-flash",
+        model= os.getenv("GEMINI_MODEL"),
         contents= prompt,
+        # max_output_tokens= os.getenv("GEMINI_MAX_OUTPUT_TOKENS") 
     )
 
     text = response.text.strip()
 
-    # print(text)
+    # print(f"----------------------{text.strip()}")
+    # print(f"----------------------{json.loads(text)}")
     return json.loads(text)
     # return text
 
@@ -88,6 +89,6 @@ if __name__ == "__main__":
     #     "gen_z": "ลาเต้เย็น 50 บาท ดื่มแล้วตื่นเต้นมาก ค่ะ ☕️💥"
     # }
 
-    print(fr"cute: {captions['cute']}")
-    print(fr"minimal: {captions['minimal']}")
-    print(fr"gen_z: {captions['gen_z']}")
+    print(f"cute: {captions['cute']}")
+    print(f"minimal: {captions['minimal']}")
+    print(f"gen_z: {captions['gen_z']}")

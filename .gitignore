@@ -2,6 +2,7 @@
 *.json
 venv
 # .github/*
+agent_trace.log
 
 # Environments
 .env
