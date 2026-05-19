@@ -19,7 +19,7 @@ def load_rag():
 
 rag = load_rag()
 
-st.title("🥛 Demi ผู้ช่วย AI ของ MilkLab°")
+st.title("🥛 Cat ผู้ช่วย AI ของ Ccoffee")
 st.caption("ถามเรื่องเมนู เวลาเปิด หรือข้อมูลร้านได้เลย")
 
 if "messages" not in st.session_state:
@@ -39,7 +39,7 @@ if prompt := st.chat_input("ถามอะไรเกี่ยวกับร�
     context = "\n---\n".join(context_chunks)
 
     # Generate
-    full_prompt = f"""คุณคือ Demi ผู้ช่วย AI ของร้าน MilkLab° ตอบเฉพาะจากข้อมูลด้านล่าง
+    full_prompt = f"""คุณคือ Cat ผู้ช่วย AI ของร้าน Ccoffee ตอบเฉพาะจากข้อมูลด้านล่าง
 ถ้าไม่พบข้อมูล ให้บอกว่าไม่ทราบ อย่าแต่งข้อมูลเอง
 
 ข้อมูลร้าน:
