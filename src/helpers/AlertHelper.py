@@ -1,9 +1,20 @@
-import streamlit as st
+try:
+    import streamlit as st
 
-class AlertHelper:
+    class AlertHelper:
+        title = ''
 
-    @st.dialog("Popup Window")
-    def show_popup():
-        st.write("This is a popup window!")
-        if st.button("Show Popup"):
-            st.warring("TTTTT")
+        def __init__(self, title, message):
+            title = title
+            self.message = message
+
+        @st.dialog("f{title}")
+        def showPopUp(self):
+            st.write(f"{self.message}")
+            if st.button("ตกลง"):
+                st.rerun()
+
+except Exception as e:
+    st.title("เกิดข้อผิดพลาด")
+
+

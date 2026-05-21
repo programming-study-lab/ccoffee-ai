@@ -9,6 +9,7 @@ import sys
 import bcrypt
 # pip install cryptography
 from cryptography.fernet import Fernet
+import streamlit as st
 
 class AdminService:
 
@@ -27,20 +28,28 @@ class AdminService:
     }):
         sheet = self.adminGoogleSheetDatabase.getSheet()
         admin = sheet.get_all_records()
-        for virify in admin:
-            if adminData['username'] == virify['username']:
+        for verify in admin:
+            if adminData['username'] == verify['username']:
         
                 userPassword = adminData['password']
                 userBytes = userPassword
-                hash = virify['password']
-                print(f"++++++++++++ {userBytes} +++++++++++")
-                print(f"++++++++++++ {hash} +++++++++++")
+                hash = verify['password']
+                # print(f"++++++++++++ {userBytes} +++++++++++")
+                # print(f"++++++++++++ {hash} +++++++++++")
 
                 # virify['password'] = virify['password'].strip("b '")
 
-                result = bcrypt.checkpw(adminData['password'].encode('utf-8'), virify['password'].encode('utf-8'))
+                result = bcrypt.checkpw(adminData['password'].encode('utf-8'), verify['password'].encode('utf-8'))
 
                 if (result):
+             
+                    # if "userAccount" not in st.session_state:
+                    st.session_state['userAccount'] = {
+                        "username": verify['username'],
+                        "user_status": verify['user_status']
+                    }
+
+
                     return True
                 else:
                     return False

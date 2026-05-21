@@ -16,7 +16,8 @@ class SalesPageController:
 
         # print(f"++++++++++++++++++++ {len(dataService)} ++++++++++++++++++++++++++")
         for data in dataService:
-            menu.append(data['menu'])
+            if data['quantity_status'] == "sale":
+                menu.append(data['menu'])
             # print(f"++++++++++++++++++++ {data} ++++++++++++++++++++++++++")
 
         # return menuService.read() 

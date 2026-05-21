@@ -1,11 +1,12 @@
-try: 
+try:
         from src.views.HomeView import HomeView
 
         homeView = HomeView()
         homeView.run()
+        
 except Exception as e:
         import streamlit as st
-        st.title("ข้ออภัย เกิดข้อผิดพลาดบางประการ")
+        st.title(f"ข้ออภัย เกิดข้อผิดพลาดบางประการ: \n\n{e}")
 
 
 # # app.py

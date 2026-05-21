@@ -26,4 +26,4 @@ try:
     #     logout.run()
 
 except Exception as e:
-    st.title("เกิดข้อผิดพลาด")
+    st.title(f"เกิดข้อผิดพลาด")

@@ -1,6 +1,7 @@
 import streamlit as st
 # from src.views.CaptionPageView import CaptionPageView
 from src.services.AdminService import AdminService
+from src.helpers.Router import Router
 
 
 class LoginView:
@@ -38,8 +39,12 @@ class LoginView:
                     # if "login_status" in st.sesstion_state:
                     st.session_state['login_status'] = True
                     # st.navigation()
-                    print(f"++++++++ {st.session_state['login_status']} +++++++++++")
-                    st.switch_page("pages/3_Caption.py")
+                    # print(f"++++++++ {st.session_state['login_status']} +++++++++++")
+                    st.switch_page("pages/1_Ccoffee Chat.py")
+             
+                    router = Router()
+                    router.run()
+                    
                     st.rerun()
    
              

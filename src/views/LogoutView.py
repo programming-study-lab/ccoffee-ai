@@ -9,6 +9,7 @@ class LogoutView:
         if logout:
             logoutController = LogoutController()
             logoutController.onLogout()
+        
 
     # def logout(self):
         
