@@ -20,5 +20,6 @@ def get_sheet():
   raise RuntimeError("ไม่พบ GOOGLE_SERVICE_ACCOUNT_JSON หรือ GOOGLE_SERVICE_ACCOUNT_FILE")
 
  client = gspread.authorize(creds)
- sheet_id = os.getenv("GOOGLE_SHEETS_ID")
+#  sheet_id = os.getenv("GOOGLE_SHEETS_ID")
+ sheet_id = os.getenv("SALES_GOOGLE_SHEET_ID")
  return client.open_by_key(sheet_id).sheet1

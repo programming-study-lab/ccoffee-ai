@@ -35,7 +35,7 @@ class Router:
         #                 # st.Page("trial.py", title="Try it out"),
         #         ],
         # }
-        print(f" ====== {st.session_state['userAccount']} =========")
+        # print(f" ====== {st.session_state['userAccount']} =========")
         if st.session_state['userAccount']['user_status'] == os.getenv("ADMIN_KEY"):
             pages = {
                 # "":"",
@@ -44,7 +44,7 @@ class Router:
                     st.Page("pages/2_Buy.py", title="สั่งซื้อ")],
                 
                 "สำหรับพนักงาน": [
-                        st.Page("pages/4_Login.py", title="เข้าสู่ระบบ"),
+                        # st.Page("pages/4_Login.py", title="เข้าสู่ระบบ"),
                         st.Page("pages/98_Register.py", title="เพิ่มพนักงาน"),
                         st.Page("pages/99_Logout.py", title="ออกจากระบบ")
                     ]

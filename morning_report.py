@@ -24,13 +24,11 @@ def main():
     if not yesterday:
         send_telegram_msg(f"ฮัลโหลลล~ เมื่อวาน ({yesterday}) เงียบเหงาจังเลย ไม่มีออเดอร์เลยค่าาา 😅")
         return
-    
+    print(f"=== {yesterday} ===")
     yesterday_sales = []
     for d in data:
         if d['date'] == yesterday:
             yesterday_sales.append(d)
-
-
 
     total_sales = 0
     menu_count = {}
