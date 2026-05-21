@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from google import genai
 
 from rag_engine import RAGEngine
+from src.controllers.ChatBotController import ChatBotController
 
 load_dotenv()
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
