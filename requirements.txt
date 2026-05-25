@@ -1,8 +1,11 @@
+altair
+pandas
+streamlit
+sentence-transformers 
+faiss-cpu
 google-genai
 python-dotenv
 gspread
 google-auth
 requests
-altair
-pandas
-streamlit
+bcrypt

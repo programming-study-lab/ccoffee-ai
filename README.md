@@ -1,4 +1,3 @@
-# ccoffee-ai
 ---
 title: ccoffee-ai
 emoji: 🚀
@@ -12,6 +11,7 @@ pinned: false
 short_description: Streamlit template space
 ---
 
+# ccoffee-ai
 # Welcome to Streamlit!
 
 Edit `/app.py` to customize this app to your heart's desire. :heart:

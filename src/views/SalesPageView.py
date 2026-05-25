@@ -123,15 +123,13 @@ class SalesPageView:
                         st.session_state['clearOnSubmit'] = False
 
                         alertHelper = AlertHelper(
-                        title="สั่งซื้อสำเร็จ", 
-                        message="ขอบคุณสำหรับการสั่งซื้อ"
+                            message="ขอบคุณสำหรับการสั่งซื้อ"
                         )
                         alertHelper.showPopUp()
 
                 except Exception as e:
                     alertHelper = AlertHelper(
-                        title="เกิดข้อผิดพลาด", 
-                        message=f"ขออภัยในความไม่สะดวก"
+                            message=f"ขออภัยในความไม่สะดวก"
                         )
                     alertHelper.showPopUp()
                     pass
