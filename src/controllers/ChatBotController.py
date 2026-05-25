@@ -8,8 +8,10 @@ from google import genai
 from rag_engine import RAGEngine
 
 class ChatBotController:
+    def __init__(self):
+        self.menuData = []
 
-    def run():
+    def run(self):
         load_dotenv()
         client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
         MODEL = "gemini-2.5-flash"
@@ -22,8 +24,8 @@ class ChatBotController:
 
         rag = load_rag()
 
-        st.title("🥛 Cat ผู้ช่วย AI ของ Ccoffee")
-        st.caption("ถามเรื่องเมนู เวลาเปิด หรือข้อมูลร้านได้เลย")
+        # st.title("🥛 Cat ผู้ช่วย AI ของ เสบียงเรียน (Study Fuel)")
+        # st.caption("ถามเรื่องเมนู เวลาเปิด หรือข้อมูลร้านได้เลย")
 
         if "messages" not in st.session_state:
             st.session_state.messages = []
@@ -42,13 +44,12 @@ class ChatBotController:
             context = "\n---\n".join(context_chunks)
 
             # Generate
-            full_prompt = f"""คุณคือ Cat ผู้ช่วย AI ของร้าน Ccoffee ตอบเฉพาะจากข้อมูลด้านล่าง
-        ถ้าไม่พบข้อมูล ให้บอกว่าไม่ทราบ อย่าแต่งข้อมูลเอง
+            full_prompt = f"""คุณคือ Cat ผู้ช่วย AI ของร้าน `เสบียงเรียน (Study Fuel)` 
+                            ตอบเฉพาะจากข้อมูลด้านล่าง ถ้าไม่พบข้อมูล ให้บอกว่าไม่ทราบ อย่าแต่งข้อมูลเอง
+        
+            ข้อมูลร้าน: {context}
 
-        ข้อมูลร้าน:
-        {context}
-
-        คำถาม: {prompt}
+            คำถาม: {prompt}
         """
             response = client.models.generate_content(model=MODEL, contents=full_prompt)
             answer = response.text
@@ -56,3 +57,9 @@ class ChatBotController:
             st.session_state.messages.append({"role": "assistant", "content": answer})
             with st.chat_message("assistant"):
                 st.write(answer)
+    
+    def setMenu(self, menu):
+        self.menuData = menu 
+    def getMenu(self):
+        return self.menuData
+

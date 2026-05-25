@@ -23,7 +23,7 @@ class CaptionController:
 
         prompt = {
             "sys": {
-                "role": "You are a creative social media copywriter for CCoffee cafe.",
+                "role": "You are a creative social media copywriter for `เสบียงเรียน (Study Fuel)`.",
                 "rules":[
                     "ใช้ Token น้อยที่สุด",
                     "caption แต่ละประเภท  อย่างน้อย 1 บรรทัด และห้ามเกิน 3 บรรทัด",
@@ -32,6 +32,7 @@ class CaptionController:
                     "Adjust the code so that the output is in Thai and use informal language.",
                 ],
                 "context":{
+                    "detail": "เป็นร้านอาหารตามสั่งสำหรับนักศึกษา มีกาแฟและชา",
                     "menu_name": menu_name,
                     "price": price
                 },

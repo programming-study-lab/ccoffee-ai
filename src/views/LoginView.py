@@ -11,21 +11,12 @@ class LoginView:
 
 
     def run(self):
-        # loginPage = st.button("login")
-
-        # self.registerPage()      
-     
-        # butt_login = False
-        # if not butt_login:
         submit_butt = False
         with st.form("login form", clear_on_submit=True):
-            st.title("Login Caption")
+            st.title("เข้าสู่ระบบ")
             username = st.text_input("username")
             password = st.text_input("password", type="password", )
-            # butt_login = st.button("onLogin")
             submit_butt = st.form_submit_button("onLogin")
-            # st.rerun()
-
 
             if submit_butt:
                     
@@ -36,37 +27,13 @@ class LoginView:
 
                 if result:
                     st.write(f'result: Ok')
-                    # if "login_status" in st.sesstion_state:
                     st.session_state['login_status'] = True
-                    # st.navigation()
-                    # print(f"++++++++ {st.session_state['login_status']} +++++++++++")
                     st.switch_page("pages/1_Ccoffee Chat.py")
              
                     router = Router()
                     router.run()
                     
                     st.rerun()
-   
              
                 else:
                     st.error("เกิดข้อผิดพลาด")
-
-            
-
-    # def run(self):
-
-    #     captionPageView = CaptionPageView()
-    #     captionPageView.run()
-
-
-# captionLogin = CaptionLogin()
-if __name__ == "__main__":
-    captionLogin = Login()
-
-    buy_page = st.Page(
-        page='pages/2_Buy.py',
-        title="Buy",
-        icon = None,
-        default = False
-    )
-    captionLogin.loginPage()

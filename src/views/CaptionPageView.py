@@ -8,11 +8,9 @@ class CaptionPageView:
     def run(self):
         st.title("แคปชั่น") 
         menu = st.text_input("Menu")
-        price = st.text_input("Price")
+        price = st.number_input("Price", format="%d", min_value=0, max_value=1000, step=1)
         butt_gen = st.button("สร้าง Caption")
 
-        # butt_gen = st.form_submit_button("สร้าง Caption")
-        
         captions = {
             'cute': '',
             'minimal': '',
@@ -23,14 +21,10 @@ class CaptionPageView:
             captions = self.captionController.generateCaptions(
                menu, price
             )
-
-        # print(f"Cute: {captions['cute']}")
-        # print(f"Minimal: {captions['minimal']}")
-        # print(f"Gen_z: {captions['gen_z']}")
         
         st.write(f"Cute: {captions['cute']}")
         st.write(f"Minimal: {captions['minimal']}")
-        st.write(f"Gen_z: {captions['gen_z']}")
+        st.write(f"Gen_Z: {captions['gen_z']}")
 
 
         
