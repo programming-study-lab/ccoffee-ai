@@ -11,7 +11,7 @@ class LoginView:
 
 
     def run(self):
-        submit_butt = False
+        # submit_butt = False
         with st.form("login form", clear_on_submit=True):
             st.title("เข้าสู่ระบบ")
             username = st.text_input("username")

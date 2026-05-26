@@ -44,7 +44,7 @@ class ChatBotController:
             context = "\n---\n".join(context_chunks)
 
             # Generate
-            full_prompt = f"""คุณคือ Cat ผู้ช่วย AI ของร้าน `เสบียงเรียน (Study Fuel)` 
+            full_prompt = f"""คุณชื่อ `Cat` เป็นผู้ช่วย AI ของร้าน `เสบียงเรียน (Study Fuel)` 
                             ตอบเฉพาะจากข้อมูลด้านล่าง ถ้าไม่พบข้อมูล ให้บอกว่าไม่ทราบ อย่าแต่งข้อมูลเอง
         
             ข้อมูลร้าน: {context}
