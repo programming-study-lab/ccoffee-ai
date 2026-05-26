@@ -18,10 +18,10 @@ try:
     captionLogin = CaptionLogin()
     if "login_status" not in st.session_state:
         st.session_state['login_status'] = False
-    if st.session_state['login_status']:
+    elif st.session_state['login_status'] == True:
         captionLogin.run()
     else:
         st.write("กรุณาเข้าสู่ระบบ")
 
 except Exception as e:
-    st.title("เกิดข้อผิดพลาดบางประการ ข้ออภัยในความไม่สะดวก")
+    st.write("เกิดข้อผิดพลาดบางประการ ข้ออภัยในความไม่สะดวก")

@@ -6,4 +6,4 @@ try:
         
 except Exception as e:
         import streamlit as st
-        st.title("ข้ออภัย เกิดข้อผิดพลาดบางประการ")
+        st.write("ข้ออภัย เกิดข้อผิดพลาดบางประการ กรุณาลองใหม่อีกครั้ง")

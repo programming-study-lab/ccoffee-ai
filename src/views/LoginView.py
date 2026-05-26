@@ -7,8 +7,8 @@ from src.helpers.Router import Router
 class LoginView:
     def __init__(self):
         self.adminService = AdminService()
-        pass
-
+        if "login_status" not in st.session_state:
+            st.session_state['login_status'] = False
 
     def run(self):
         # submit_butt = False
@@ -27,8 +27,13 @@ class LoginView:
 
                 if result:
                     st.write(f'result: Ok')
-                    st.session_state['login_status'] = True
-                    st.switch_page("pages/1_Ccoffee Chat.py")
+                    if "login_status" not in st.session_state:
+                        st.session_state['login_status'] = False
+                    elif result:
+                        st.session_state['login_status'] = True
+                        st.switch_page("pages/1_Ccoffee Chat.py")
+                    else:
+                        st.session_state['login_status'] = False
              
                     router = Router()
                     router.run()
