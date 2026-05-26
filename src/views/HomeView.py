@@ -17,7 +17,7 @@ class HomeView:
 
     def run(self):
         # st.title("Ccoffee")
-        st.title("🥛 Cat ผู้ช่วย AI ของร้าน เสบียงเรียน (Study Fuel)")
+        st.title("Cat ผู้ช่วย AI ของร้าน เสบียงเรียน (Study Fuel)")
         st.caption("ถามเรื่องเมนู เวลาเปิด หรือข้อมูลร้านได้เลย")
 
         st.set_page_config(layout="wide")
