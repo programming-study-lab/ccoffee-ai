@@ -44,9 +44,9 @@ https://github.com/programming-study-lab/ccoffee-ai/blob/main/PIVOT.md
 
 # วัตถุประสงค์ 
 โปรเจค ร้านอาหาร เสบียงเรียน (Study Fuel) เพื่อการศึกษา การใช้งาน AI ช่วยพัฒนา Web Application สำหรับ ธุรกิจแบบ  Solopreneurs
-# คาดหวัง
+# สิ่งที่คาดหวัง
 การนำ AI มาประยุกค์ใช้ในงาน Web Application สำหรับ ธุรกิจแบบ Solopreneurs
-# ได้เรียนรู้
+# สิ่งที่ได้เรียนรู้
 - Session 1: สร้าง Caption โดยใช้ AI
 - Session 2: 
     1) การใช้งาน GitHub Actions Workflow
