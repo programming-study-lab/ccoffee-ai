@@ -29,17 +29,17 @@ https://github.com/programming-study-lab/ccoffee-ai/blob/main/PIVOT.md
 - Google Gemini API
 
 ## Reflection
-1) สิ่งที่ทำได้ดีที่สุดใน 5 session นี้คืออะไร
-ตอบ 1. Check-in หน้าห้อง + ส่ง Agent Harness Report (ฉบับเขียนมือ) ให้ผู้สอน
-    2. Final Exam — Written On-site (handwritten) 1 ชั่วโมง closed-book
-    3. Reflection brief 
-2) Pivot จาก MilkLab° เป็น domain ของตัวเอง ส่วนไหนยากที่สุด
-ตอบ 1. หาไอเดียธุรกิจ
-    2. การใช้งาน Streamlit โดยเฉพาะ การ ใช้งาน st.navigation
-    3. การใช้งาน Library "bcrypt"
-3) Feedback จาก cohort ที่จะเอาไปใช้ มีอะไรบ้าง
-ตอบ "ควรเพิ่มระบบจัดการ Context เพื่อให้บอทจดจำข้อความสนทนาได้"
-4) จะนำ skill ที่ได้ไปใช้กับโปรเจกต์/ธุรกิจอะไรต่อไป
+1) สิ่งที่ทำได้ดีที่สุดใน 5 session นี้คืออะไร <br>
+ตอบ 1. Check-in หน้าห้อง + ส่ง Agent Harness Report (ฉบับเขียนมือ) ให้ผู้สอน <br>
+    2. Final Exam — Written On-site (handwritten) 1 ชั่วโมง closed-book <br>
+    3. Reflection brief <br>
+2) Pivot จาก MilkLab° เป็น domain ของตัวเอง ส่วนไหนยากที่สุด <br>
+ตอบ 1. หาไอเดียธุรกิจ <br>
+    2. การใช้งาน Streamlit โดยเฉพาะ การ ใช้งาน st.navigation <br>
+    3. การใช้งาน Library "bcrypt" <br>
+3) Feedback จาก cohort ที่จะเอาไปใช้ มีอะไรบ้าง <br>
+ตอบ "ควรเพิ่มระบบจัดการ Context เพื่อให้บอทจดจำข้อความสนทนาได้" <br>
+4) จะนำ skill ที่ได้ไปใช้กับโปรเจกต์/ธุรกิจอะไรต่อไป <br>
 ตอบ จะนำไปใช้ประกอบอาชีพ
 
 # วัตถุประสงค์ 
