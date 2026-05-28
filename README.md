@@ -78,7 +78,7 @@ Password: password
 
 ## วิธี run local
 # บน Windows OS
-
+```bash
 git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 
 > python -m venv venv
@@ -87,7 +87,8 @@ git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 > venv/Scripts/Activate.ps1  หรือ venv/Scripts/activate
 
 (venv)> streamlit run app.py
-
+```
+```bash
 สร้างไฟล์ .env
     # Gemini
     GEMINI_MAX_OUTPUT_TOKENS=<จำนวน Token สูงสุดที่ต้องการใช้>
@@ -109,7 +110,7 @@ git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 
 สร้างไฟล์ service-account.json
     ข้อมูลในไฟล์ คือ service account จาก Google
-
+```
 
 ## Session 1: Caption Generator
 # สิ่งที่ต้องเตรียมก่อนเริ่ม
@@ -196,6 +197,7 @@ git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 - [ / ] knowledge base, prompt, UI ปรับเป็น domain ใหม่หมดแล้ว
 
 ## Directory Tree
+```base
 .
 ├── CNAME
 ├── Dockerfile
@@ -284,3 +286,4 @@ git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 │           └── SalesPageView.cpython-312.pyc
 ├── streamlit_app.py
 └── test.py
+```
