@@ -24,9 +24,6 @@ class ChatBotController:
 
         rag = load_rag()
 
-        # st.title("🥛 Cat ผู้ช่วย AI ของ เสบียงเรียน (Study Fuel)")
-        # st.caption("ถามเรื่องเมนู เวลาเปิด หรือข้อมูลร้านได้เลย")
-
         if "messages" not in st.session_state:
             st.session_state.messages = []
 

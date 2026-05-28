@@ -1,6 +1,5 @@
 FROM python:3.13.5-slim
 
-# WORKDIR /app
 WORKDIR /
 
 RUN apt-get update && apt-get install -y \
@@ -10,7 +9,6 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./
-# COPY src/ ./src/
 COPY / ./
 
 RUN pip3 install -r requirements.txt

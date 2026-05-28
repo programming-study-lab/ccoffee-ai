@@ -22,7 +22,6 @@ except ValueError as e:
 
 tz = timezone(timedelta(hours = 7))
 now = dt.datetime.now(tz=tz)
-# date_time_now = now.strftime("%Y-%m-%d %H:%M:%S")
 date_time_now = now.strftime("%d/%m/%Y")
 
 sheet = get_sheet()

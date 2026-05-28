@@ -10,17 +10,12 @@ class HomeController:
 
 
     def getMenu(self):
-        # menuMode = MenuModel
         dataService = self.menuService.read()
         menu = []
-        # print(f"{menuService.read()}")
 
-        # print(f"++++++++++++++++++++ {len(dataService)} ++++++++++++++++++++++++++")
         for data in dataService:
             menu.append(data['menu'])
-            # print(f"++++++++++++++++++++ {data} ++++++++++++++++++++++++++")
 
-        # return menuService.read() 
         return menu
     
     def getPrice(self, menu):

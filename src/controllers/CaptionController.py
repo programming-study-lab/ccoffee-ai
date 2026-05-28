@@ -11,16 +11,6 @@ client = genai.Client()
 class CaptionController:
 
     def generateCaptions(self, menu_name: str, price: str) -> Dict[str, str]:
-        # prompt = """Generate three Instagram caption variants for CCoffee posts.
-
-        # Args:
-        #     menu_name: ${menu_name}.
-        #     price: ${price}.
-
-        # Returns:
-        #     A dictionary with three caption styles: cute, minimal, gen_z.
-        # """
-
         prompt = {
             "sys": {
                 "role": "You are a creative social media copywriter for `เสบียงเรียน (Study Fuel)`.",
@@ -36,32 +26,16 @@ class CaptionController:
                     "menu_name": menu_name,
                     "price": price
                 },
-                # "exec": "Generate three Instagram caption variants for CCoffee posts.",
                 "exec": "Write three Instagram captions for the following menu item and price.",
-                # "output": [
-                #     "json format",
-                #     "A dictionary with three caption styles: cute, minimal, gen_z."
-                #     ]
             }
         }
-        # prompt = (
-        #     "You are a creative social media copywriter for CCoffee cafe. "
-        #     "Write three Instagram captions for the following menu item and price. "
-        #     "Return the output as valid JSON application with keys: cute, minimal, gen_z.\n\n"
-        #     "Use a friendly tone suitable for Instagram. "
-        #     "Do not include extra explanation or markdown formatting in the JSON output."
-        #     "Adjust the code so that the output is in Thai and use informal language."
-        # )
-
 
         response = client.models.generate_content(
             model= os.getenv("GEMINI_MODEL"),
             contents= f"{prompt}",
         )
 
-        # text = response.text.strip()
         text = response.text
-        # print(f"++++++++++++++++++ {text} +++++++++++++++++++++++")
 
         text = self.clearJsonMarkdown(text)
 

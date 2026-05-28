@@ -9,18 +9,13 @@ class SalesPageController:
         return self.menuService.read()
 
     def getMenu(self):
-        # menuMode = MenuModel
         dataService = self.menuService.read()
         menu = []
-        # print(f"{menuService.read()}")
 
-        # print(f"++++++++++++++++++++ {len(dataService)} ++++++++++++++++++++++++++")
         for data in dataService:
             if data['quantity_status'] == "sale":
                 menu.append(data['menu'])
-            # print(f"++++++++++++++++++++ {data} ++++++++++++++++++++++++++")
 
-        # return menuService.read() 
         return menu
     
     def getPrice(self, menu):

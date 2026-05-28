@@ -1,7 +1,6 @@
 import streamlit as st
 from src.models.SalesModel import SalesModel
 from src.services.SalesService import SalesService
-# from src.services.MenuService import MenuService
 from src.controllers.SalesPageController import SalesPageController
 from src.helpers.AlertHelper import AlertHelper
 
@@ -9,7 +8,6 @@ class SalesPageView:
     def __init__(self):
         self.salesModel = SalesModel()
         self.salesService = SalesService()
-        # self.menuService = MenuService()
         self.salesPageController = SalesPageController()
         if "input_status" not in st.session_state:
             st.session_state['input_status'] = {
@@ -35,23 +33,18 @@ class SalesPageView:
             st.session_state['quantity'] = ""
         if "detail" not in st.session_state:
             st.session_state['detail'] = ""
-        # self.salesPageController.getMenu()
 
     def run(self):
         st.set_page_config(
             page_title="test",
-            # page_icon="a"
         )
 
         st.title("สั่งซื้อ")
         st.sidebar.title("เมนู")
-        # st.sidebar.success(f"{self.salesPageController.getMenu()}")
         for data in self.salesPageController.getAllDataMenu():
-            # st.sidebar.success(f"{data}")
             if data['quantity_status'] != "sold_out":
                 st.sidebar.success(f"{data['menu']} ราคา {data['price']}")
 
-        # st.warning(f"{st.session_state['clearOnSubmit']} || {st.session_state}") 
         with st.form("สั่งซื้อสินค้า", clear_on_submit=True):
 
             name = st.text_input("ชื่อ (จำเป็น)", st.session_state["name"])
@@ -75,10 +68,8 @@ class SalesPageView:
                 st.warning("กรุณาเพิ่มข้อมูลเมนู")
 
             quantity = st.number_input("จำนวน (น้อยสุด = 1, มากสุด = 21)", format="%d", min_value=1, max_value=21, step=1)
-            # quantity = st.selectbox("จำนวน", ,)
             detail = st.text_input("รายละเอียด (ไม่ใส่ก็ได้)", st.session_state["detail"])
             st.session_state['detail'] = detail
-            # buy_butt = st.button("Buy")
             buy_butt = st.form_submit_button("Buy")
 
             if buy_butt:
@@ -134,6 +125,3 @@ class SalesPageView:
                     alertHelper.showPopUp()
                     pass
 
-                # st.navigator('./1_Ccoffee Chat.py')
-
-                # self.show_popup()

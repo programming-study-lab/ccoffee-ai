@@ -1,0 +1,33 @@
+# บน Windows OS
+
+git clone https://github.com/programming-study-lab/ccoffee-ai.git
+cd ccoffee-ai
+
+python -m venv venv
+venv/Scripts/pip install -r .\requirements.txt
+
+venv/Scripts/Activate.ps1  หรือ venv/Scripts/activate
+
+(venv) streamlit run app.py
+
+สร้างไฟล์ .env
+    # Gemini
+    GEMINI_MAX_OUTPUT_TOKENS=<จำนวน Token สูงสุดที่ต้องการใช้>
+    GEMINI_MODEL= <โมเดล Gemini>
+    GEMINI_API_KEY= <api ของ Gemini>
+    
+    # Telegram
+    TELEGRAM_BOT_TOKEN= <telegram_token>
+    TELEGRAM_CHAT_ID= <id_chat_telegram>
+
+    # Google Sheets services
+    GOOGLE_SERVICE_ACCOUNT_FILE= <path_file>
+    SALES_GOOGLE_SHEET_ID= <id ของ Google Sheet สำหรับบันทึกคำสั่งซื้อ>
+    MENU_GOOGLE_SHEET_ID= <id ของ Google Sheet สำหรับบันทึกเมนู>
+    ADMIN_GOOGLE_SHEET_ID= <id ของ Google Sheet สำหรับบันทึกข้อมูลของผู้ดูแลระบบ>
+
+    # Admin Key (สำหรับการทดสอบ)
+    ADMIN_KEY= <ใช้สำหรับตรวจสอบ Admin (แบบทดสอบ)>
+
+สร้างไฟล์ service-account.json
+    ข้อมูลในไฟล์ คือ service account จาก Google

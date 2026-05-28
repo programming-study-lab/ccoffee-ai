@@ -11,7 +11,6 @@ class LogoutView:
             logoutController.onLogout()
         
 
-    # def logout(self):
         
 
     

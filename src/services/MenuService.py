@@ -2,7 +2,6 @@ import datetime as dt
 from datetime import timezone, timedelta
 import os
 from dotenv import load_dotenv
-# from sheets_client import get_sheet
 from src.databases.MenuGoogleSheet import MenuGoogleSheetDatabase
 from src.models.SalesModel import SalesModel
 import sys
@@ -11,11 +10,9 @@ class MenuService:
 
     def __init__(self):
         self.menuGoogleSheetDatabase = MenuGoogleSheetDatabase
-        # self.salesModel = SalesModel()
 
     def read(self):
         sheet = self.menuGoogleSheetDatabase.getSheet()
-        # print(f"{sheet.get_all_records()}")
         return sheet.get_all_records()
 
     def onBuy(self, data):
@@ -39,7 +36,6 @@ class MenuService:
 
         tz = timezone(timedelta(hours = 7))
         now = dt.datetime.now(tz=tz)
-        # date_time_now = now.strftime("%Y-%m-%d %H:%M:%S")
         date_time_now = now.strftime("%d/%m/%Y")
 
         sheet = self.salesGoogleSheetDatabase.getSheet()
