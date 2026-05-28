@@ -18,8 +18,8 @@ https://huggingface.co/spaces/ccoffee2026/shop
 https://github.com/programming-study-lab/ccoffee-ai/blob/main/PIVOT.md
 
 ## สำหรับเข้าสู่ระบบ
-User Name: demo-day
-Password: password
+- User Name: demo-day
+- Password: password
 
 ## Tech Stack
 - GitHub
