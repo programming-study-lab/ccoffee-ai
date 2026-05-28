@@ -203,11 +203,6 @@ git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 ├── Dockerfile
 ├── PIVOT.md
 ├── README.md
-├── __pycache__
-│   ├── agent_tools.cpython-312.pyc
-│   ├── rag_engine.cpython-312.pyc
-│   ├── sheets_client.cpython-312.pyc
-│   └── test.cpython-312.pyc
 ├── agent_harness.py
 ├── agent_tools.py
 ├── agent_trace.log
@@ -234,56 +229,29 @@ git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
 │   │   ├── ChatBotController.py
 │   │   ├── HomeController.py
 │   │   ├── LogoutController.py
-│   │   ├── SalesPageController.py
-│   │   └── __pycache__
-│   │       ├── CaptionController.cpython-312.pyc
-│   │       ├── ChatBotController.cpython-312.pyc
-│   │       ├── HomeController.cpython-312.pyc
-│   │       ├── LogoutController.cpython-312.pyc
-│   │       └── SalesPageController.cpython-312.pyc
+│   │   └── SalesPageController.py
 │   ├── databases
 │   │   ├── AdminGoogleSheetDatabase.py
 │   │   ├── MenuGoogleSheet.py
-│   │   ├── SalesGoogleSheetDatabase.py
-│   │   └── __pycache__
-│   │       ├── AdminGoogleSheetDatabase.cpython-312.pyc
-│   │       ├── MenuGoogleSheet.cpython-312.pyc
-│   │       └── SalesGoogleSheetDatabase.cpython-312.pyc
+│   │   └── SalesGoogleSheetDatabase.py
 │   ├── helpers
 │   │   ├── AlertHelper.py
-│   │   ├── Router.py
-│   │   └── __pycache__
-│   │       ├── AlertHelper.cpython-312.pyc
-│   │       └── Router.cpython-312.pyc
+│   │   └── Router.py
 │   ├── models
 │   │   ├── MenuModel.py
-│   │   ├── SalesModel.py
-│   │   └── __pycache__
-│   │       ├── MenuModel.cpython-312.pyc
-│   │       └── SalesModel.cpython-312.pyc
+│   │   └── SalesModel.py
 │   ├── services
 │   │   ├── AdminService.py
 │   │   ├── MenuService.py
-│   │   ├── SalesService.py
-│   │   └── __pycache__
-│   │       ├── AdminService.cpython-312.pyc
-│   │       ├── MenuService.cpython-312.pyc
-│   │       └── SalesService.cpython-312.pyc
+│   │   └── SalesService.py
 │   └── views
 │       ├── CaptionPageView.py
 │       ├── HomeView.py
 │       ├── LoginView.py
 │       ├── LogoutView.py
 │       ├── RegisterView.py
-│       ├── SalesPageView.py
-│       └── __pycache__
-│           ├── CaptionPageView.cpython-312.pyc
-│           ├── HomeView.cpython-312.pyc
-│           ├── LoginView.cpython-312.pyc
-│           ├── LogoutView.cpython-312.pyc
-│           ├── QueuesPageView.cpython-312.pyc
-│           ├── RegisterView.cpython-312.pyc
-│           └── SalesPageView.cpython-312.pyc
+│       └── SalesPageView.py
 ├── streamlit_app.py
-└── test.py
+├── test.py
+└── คู่มือติดตั้ง.txt
 ```
