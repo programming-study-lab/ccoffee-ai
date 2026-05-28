@@ -79,8 +79,8 @@ https://github.com/programming-study-lab/ccoffee-ai/blob/main/PIVOT.md
 ## วิธี run local
 # บน Windows OS
 ```bash
-git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
-
+> git clone https://github.com/programming-study-lab/ccoffee-ai.cd ccoffee-ai
+> cd ccoffee-ai
 > python -m venv venv
 > venv/Scripts/pip install -r .\requirements.txt
 
