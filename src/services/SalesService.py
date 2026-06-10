@@ -37,7 +37,7 @@ class SalesService:
 
         tz = timezone(timedelta(hours = 7))
         now = dt.datetime.now(tz=tz)
-        date_time_now = now.strftime("%d/%m/%Y")
+        date_time_now = now.strftime("%d/%m/%Y").strip("\'")
 
         sheet = self.salesGoogleSheetDatabase.getSheet()
         sheet.append_row([date_time_now, salesModel.name, salesModel.phone, salesModel.address, salesModel.detail, salesModel.menu, quantity, price, total])

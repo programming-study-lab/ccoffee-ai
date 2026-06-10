@@ -11,8 +11,11 @@ pinned: false
 short_description: Streamlit template space
 ---
 
-## URL หน้าเว็บ
+## URL หน้าเว็บ Huggingface
 https://huggingface.co/spaces/ccoffee2026/shop
+
+## URL หน้าเว็บ shop.ccoffee.me
+https://shop.ccoffee.me/
 
 ## PIVOT
 https://github.com/programming-study-lab/ccoffee-ai/blob/main/PIVOT.md
